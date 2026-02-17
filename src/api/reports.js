@@ -5,8 +5,8 @@ import { axiosInstance } from './auth';
 const reportsAPI = {
   getAttendanceReport: async (subject, date) => {
     try {
-      // const response = await axiosInstance.get('/reports', {  # prevously work but it not generate report
-      const response = await axiosInstance.get('/reports/', {
+      const response = await axiosInstance.get('/reports', {  
+      // const response = await axiosInstance.get('/reports/', {
         params: { subject, date }
       });
       return response.data;
